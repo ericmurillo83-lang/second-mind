@@ -1,0 +1,12 @@
+/* Web-only font stacks (native platforms use the system font). */
+:root {
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Inter,
+    system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-rounded: 'SF Pro Rounded', ui-rounded, -apple-system, 'Segoe UI', Roboto, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
