@@ -44,4 +44,6 @@ serious/critical WCAG violation. Screenshots + `results.json` land in `e2e/artif
 
 ## Backend (`api/`)
 
-See `api/README.md`: `pytest` against a real PostgreSQL database, plus `ruff`.
+See `api/README.md`. 30 `pytest` tests run against a throwaway PostgreSQL database built with
+the real Alembic migrations (CRUD, validation, isolation, cascades, export/delete, migrations,
+startup guard, safety guards), plus `ruff` lint/format.

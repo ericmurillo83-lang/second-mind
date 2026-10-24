@@ -38,9 +38,28 @@ Each milestone is built, tested and committed before the next one starts.
 **Not yet done:** native device runs (needs macOS/Xcode or an EAS account; see `APPROVALS.md`),
 manual VoiceOver/TalkBack pass, encryption at rest.
 
-## Milestone 2 — Backend foundation (FastAPI + PostgreSQL)
+## ✅ Milestone 2 — Backend foundation (FastAPI + PostgreSQL)
 
-See `api/README.md` and the entry below once complete.
+**Built** (`api/`, local development only, not connected to the app)
+
+- FastAPI + SQLAlchemy 2.1 + Alembic on PostgreSQL 16; models mirror the mobile data model.
+- User-scoped CRUD for all nine collections, descriptive glucose stats (same aggregation as the app),
+  full data export, and account deletion with cascades.
+- Validation parity with the app; `client_id` per record for future idempotent sync.
+- Isolation: per-user filtering, 404 for others' records, ownership checks on cross-references.
+- Development header auth with a startup guard that **refuses production** (and refuses OIDC until
+  an identity provider is approved).
+- Initial migration (incl. enum cleanup on downgrade), Docker Compose for local Postgres.
+
+**Tested**
+
+- pytest: **30 tests** against a real PostgreSQL database built by the migrations: CRUD,
+  validation, filters, conflicts, cascades, isolation, export/delete, stats parity, startup
+  guard, migrations-match-models, downgrade/re-upgrade, and safety guards (no dosing/alert
+  fields or endpoints).
+- `ruff` lint + format: clean.
+- Live smoke test with uvicorn: health, DB health, 401 without identity, create/stats/delete, and
+  production refusal confirmed.
 
 ## Proposed next milestones
 

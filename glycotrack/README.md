@@ -4,8 +4,8 @@ A premium, privacy-first diabetes **logbook and organizer** for iOS and Android:
 meal planning and carbohydrate tracking, medications and reminders, appointments, medical notes
 and records.
 
-> **Status:** Milestone 1 complete (mobile app with local storage). Milestone 2 (backend
-> foundation) is next. **Not released.** Nothing is deployed. See [`docs/APPROVALS.md`](docs/APPROVALS.md).
+> **Status:** Milestone 1 (mobile app with local storage) and Milestone 2 (backend foundation,
+> local only) complete. **Not released.** Nothing is deployed. See [`docs/APPROVALS.md`](docs/APPROVALS.md).
 
 > **Safety:** GlycoTrack does not provide medical advice, never calculates insulin or any
 > medication dose, and does not monitor glucose or send glucose alarms. See [`docs/SAFETY.md`](docs/SAFETY.md).
