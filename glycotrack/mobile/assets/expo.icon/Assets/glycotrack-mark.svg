@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- GlycoTrack mark: a drop with a tracking line. White on transparent; tinted per use. -->
+  <path d="M512 176 C512 176 270 446 270 610 A242 242 0 0 0 754 610 C754 446 512 176 512 176 Z" fill="#FFFFFF"/>
+  <polyline points="372,622 446,622 482,548 532,700 568,622 652,622" fill="none" stroke="#3451D1" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

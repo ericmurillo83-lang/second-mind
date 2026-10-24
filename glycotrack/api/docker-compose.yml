@@ -1,0 +1,14 @@
+# Local development database only. Not a deployment configuration.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: glycotrack
+      POSTGRES_PASSWORD: glycotrack-local-dev
+      POSTGRES_DB: glycotrack
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - glycotrack-pg:/var/lib/postgresql/data
+volumes:
+  glycotrack-pg:
